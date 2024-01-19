@@ -28,6 +28,9 @@ import { RouterModule } from '@angular/router';
         <li nz-menu-item>
           <a routerLink="/signup">signup</a>
         </li>
+        <li nz-menu-item>
+          <a routerLink="/form">new form</a>
+        </li>
       </ul>
     </nav>
   `,
