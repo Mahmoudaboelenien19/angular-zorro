@@ -122,7 +122,10 @@ const inputs = [
         </nz-form-item>
         }
         <nz-form-item nz-row class="register-area">
-          <nz-form-control [nzSpan]="14" [nzOffset]="6">
+          <nz-form-control
+            [nzXs]="{ span: 24 }"
+            [nzSm]="{ span: 16, offset: 6 }"
+          >
             <label nz-checkbox formControlName="agree">
               <span>
                 I have read the
@@ -132,9 +135,14 @@ const inputs = [
           </nz-form-control>
         </nz-form-item>
 
-        <nz-form-item nz-row class="register-area">
-          <nz-form-control [nzSpan]="14" [nzOffset]="6">
-            <button nz-button nzType="primary">Register</button>
+        <nz-form-item nz-row>
+          <nz-form-control
+            [nzXs]="{ span: 24 }"
+            [nzSm]="{ span: 16, offset: 6 }"
+          >
+            <button nz-button nzType="primary" class=" col-12 col-sm-4">
+              Register
+            </button>
           </nz-form-control>
         </nz-form-item>
       </form>
