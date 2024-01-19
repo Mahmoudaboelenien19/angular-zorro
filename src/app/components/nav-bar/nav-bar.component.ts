@@ -23,10 +23,12 @@ import { RouterModule } from '@angular/router';
           <a routerLink="/buttons">buttosn</a>
         </li>
         <li nz-menu-item>
-          <a routerLink="/form">form</a>
+          <a routerLink="/login">login</a>
+        </li>
+        <li nz-menu-item>
+          <a routerLink="/signup">signup</a>
         </li>
       </ul>
-      <button>theme</button>
     </nav>
   `,
 })

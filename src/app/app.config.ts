@@ -12,9 +12,11 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import {
   DesktopOutline,
+  EyeOutline,
   HighlightFill,
   HighlightOutline,
   LockOutline,
+  MailOutline,
   PieChartOutline,
   PoweroffOutline,
   SettingFill,
@@ -33,6 +35,8 @@ const icons: IconDefinition[] = [
   PieChartOutline,
   DesktopOutline,
   LockOutline,
+  EyeOutline,
+  MailOutline,
 ];
 registerLocaleData(en);
 
