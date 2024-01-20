@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { NzConfigService } from 'ng-zorro-antd/core/config';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,11 @@ import { LayoutComponent } from './components/layout/layout.component';
     <app-nav-bar></app-nav-bar>
     <router-outlet></router-outlet>
   `,
+  styles: `
+
+
+  `,
 })
 export class AppComponent {
-  title = 'zorro';
+  constructor(private nzConfigService: NzConfigService) {}
 }
-// template: `<app-nav-bar></app-nav-bar>

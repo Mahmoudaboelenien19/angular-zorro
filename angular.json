@@ -24,13 +24,13 @@
               {
                 "glob": "**/*",
                 "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
-
                 "output": "/assets/"
               }
             ],
             "styles": [
               "node_modules/bootstrap/scss/bootstrap.scss",
-              "src/theme.less"
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/styles.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"

@@ -1,6 +1,6 @@
+import { ngZorroConfig } from './color.config';
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { en_US, provideNzI18n } from 'ng-zorro-antd/i18n';
@@ -9,37 +9,10 @@ import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { NzIconModule } from 'ng-zorro-antd/icon';
-import {
-  DesktopOutline,
-  EyeOutline,
-  HighlightFill,
-  HighlightOutline,
-  LockOutline,
-  MailOutline,
-  PieChartOutline,
-  PoweroffOutline,
-  SettingFill,
-  UpSquareFill,
-  UserOutline,
-} from '@ant-design/icons-angular/icons';
-import { IconDefinition } from '@ant-design/icons-angular';
+import { provideNzIcons } from './icons-provider';
+import { NZ_CONFIG } from 'ng-zorro-antd/core/config';
 
-const icons: IconDefinition[] = [
-  HighlightFill,
-  UserOutline,
-  UpSquareFill,
-  HighlightOutline,
-  PoweroffOutline,
-  SettingFill,
-  PieChartOutline,
-  DesktopOutline,
-  LockOutline,
-  EyeOutline,
-  MailOutline,
-];
 registerLocaleData(en);
-
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
@@ -48,6 +21,7 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(FormsModule),
     importProvidersFrom(HttpClientModule),
     provideAnimations(),
-    importProvidersFrom(NzIconModule.forRoot(icons)),
+    provideNzIcons(),
+    { provide: NZ_CONFIG, useValue: ngZorroConfig },
   ],
 };
