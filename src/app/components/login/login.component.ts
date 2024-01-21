@@ -113,7 +113,6 @@ const inputs = [
     `
       .form-login {
         max-width: 400px;
-        // background-color: grey;
       }
       small {
         text-align: center;
