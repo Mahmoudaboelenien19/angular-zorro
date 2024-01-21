@@ -147,10 +147,24 @@ export class NavBarComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)) {
       this.theme =
         (localStorage.getItem('theme') as 'light' | 'dark') || 'light';
-      this.toggleTheme();
+      if (this.theme === 'light') {
+        this.applyLightMode();
+      } else {
+        this.applyDarkMode();
+      }
     }
   }
 
+  applyDarkMode() {
+    (document.getElementById('theme-link') as HTMLAnchorElement).href =
+      './assets/themes/dark.css';
+    document.body.classList.add('dark');
+  }
+  applyLightMode() {
+    (document.getElementById('theme-link') as HTMLAnchorElement).href =
+      './assets/themes/light.css';
+    document.body.classList.remove('dark');
+  }
   setActiveLink(path: string) {
     this.activeLink = path;
   }
@@ -158,16 +172,11 @@ export class NavBarComponent implements OnInit {
     if (this.theme === 'dark') {
       localStorage.setItem('theme', 'light');
       this.theme = 'light';
-      (document.getElementById('theme-link') as HTMLAnchorElement).href =
-        './assets/themes/light.css';
-      document.body.classList.remove('dark');
+      this.applyLightMode();
     } else {
       localStorage.setItem('theme', 'dark');
-
       this.theme = 'dark';
-      (document.getElementById('theme-link') as HTMLAnchorElement).href =
-        './assets/themes/dark.css';
-      document.body.classList.add('dark');
+      this.applyDarkMode();
     }
   }
 }
