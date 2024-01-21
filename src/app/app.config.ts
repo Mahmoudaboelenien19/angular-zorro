@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideNzIcons } from './icons-provider';
-import { NZ_CONFIG } from 'ng-zorro-antd/core/config';
 
 registerLocaleData(en);
 export const appConfig: ApplicationConfig = {
@@ -22,6 +21,5 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(HttpClientModule),
     provideAnimations(),
     provideNzIcons(),
-    { provide: NZ_CONFIG, useValue: ngZorroConfig },
   ],
 };

@@ -4,10 +4,7 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { RouterModule } from '@angular/router';
-import {
-  BreakpointMap,
-  NzBreakpointService,
-} from 'ng-zorro-antd/core/services';
+import { NzBreakpointService } from 'ng-zorro-antd/core/services';
 import { CommonModule, Location } from '@angular/common';
 const links = [
   { link: 'home', path: '' },
@@ -15,7 +12,7 @@ const links = [
   { link: 'logi n', path: '/login' },
   { link: 'signup', path: '/signup' },
   { link: 'form ', path: '/form' },
-  { link: 'card ', path: '/card' },
+  { link: 'cards ', path: '/card' },
 ];
 @Component({
   selector: 'app-nav-bar',
@@ -30,7 +27,7 @@ const links = [
   ],
   template: `
     <nav
-      class=" position-sticky top-0   navbar navbar-expand-sm navbar-light bg-light "
+      class=" position-fixed top-0   navbar navbar-expand-sm navbar-light bg-light  w-100"
     >
       <div class="container-fluid  h-100  ">
         <a class="navbar-brand" href="#">Navbar</a>

@@ -1,6 +1,8 @@
 import { EnvironmentProviders, importProvidersFrom } from '@angular/core';
 import {
   DesktopOutline,
+  EditOutline,
+  EllipsisOutline,
   EyeOutline,
   HighlightFill,
   HighlightOutline,
@@ -9,6 +11,7 @@ import {
   PieChartOutline,
   PoweroffOutline,
   SettingFill,
+  SettingOutline,
   UpSquareFill,
   UserOutline,
 } from '@ant-design/icons-angular/icons';
@@ -26,6 +29,9 @@ const icons = [
   LockOutline,
   EyeOutline,
   MailOutline,
+  EllipsisOutline,
+  EditOutline,
+  SettingOutline,
 ];
 
 export function provideNzIcons(): EnvironmentProviders {

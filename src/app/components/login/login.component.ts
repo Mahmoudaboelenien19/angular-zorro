@@ -50,11 +50,13 @@ const inputs = [
     NzNotificationModule,
   ],
   template: `
-    <div class="d-flex justify-content-center align-items-center w-100  h-75 ">
+    <div
+      class="mt-5 d-flex justify-content-center align-items-center w-100  h-75 "
+    >
       <form
         nz-form
         [formGroup]="validateForm"
-        class="w-100 form-login  px-3 py-5"
+        class="w-100 form-login  px-3 py-5 bg-light shadow-sm"
         (ngSubmit)="submitForm()"
       >
         <h3 class="text-center" nz-typography>Welcome Back. !</h3>

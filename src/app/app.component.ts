@@ -14,11 +14,8 @@ import { NzConfigService } from 'ng-zorro-antd/core/config';
     <app-nav-bar></app-nav-bar>
     <router-outlet></router-outlet>
   `,
-  styles: `
-
-
-  `,
+  styles: `  `,
 })
 export class AppComponent {
-  constructor(private nzConfigService: NzConfigService) {}
+  // constructor(private nzConfigService: NzConfigService) {}
 }

@@ -1,8 +1,14 @@
-@import "../node_modules/ng-zorro-antd/ng-zorro-antd.variable.min.css";
-
 /* html {
   scrollbar-gutter: stable;
 } */
 :root {
   --bs-primary-rgb: 245, 85, 85; /* Replace with your desired RGB color values */
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.bg-light {
+  background-color: #e2e4e9 !important;
 }
