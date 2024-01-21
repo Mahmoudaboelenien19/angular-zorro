@@ -7,8 +7,18 @@
 
 body {
   box-sizing: border-box;
+
+  .text {
+    color: black !important;
+  }
 }
 
-.bg-light {
-  background-color: #e2e4e9 !important;
+body.dark {
+  background: black;
+  .bg-light {
+    background-color: #111 !important;
+  }
+  .text {
+    color: white !important;
+  }
 }

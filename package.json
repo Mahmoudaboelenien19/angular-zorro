@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": " ng serve",
-    "build": "ng build",
+    "start": " node ./less-compiler.js && ng serve",
+    "build": "node ./less-compiler.js && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:zorro": "node dist/zorro/server/server.mjs"
@@ -47,7 +47,6 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "less": "^4.2.0",
     "less-plugin-clean-css": "^1.5.1",
     "typescript": "~5.2.2"
   }

@@ -39,7 +39,7 @@ const links = [
             <li class="nav-item mx-2 h-100">
               <a
                 (click)="setActiveLink(link.path)"
-                class="nav-link d-flex align-items-center "
+                class="nav-link d-flex align-items-center text"
                 [ngClass]="activeLink == link.path ? 'active text-primary' : ''"
                 aria-current="page"
                 [routerLink]="[link.path]"
@@ -60,6 +60,8 @@ const links = [
         >
           <i class="bi bi-three-dots-vertical"></i>
         </button>
+
+        <i class="bi bi-gear-fill" (click)="toggleTheme()"></i>
       </div>
     </nav>
   `,
@@ -127,20 +129,29 @@ const links = [
 export class NavBarComponent implements OnInit {
   links = links;
   activeLink = '';
-  isMobile = false;
+  theme: 'light' | 'dark' = 'light';
   ngOnInit(): void {
     this.activeLink = this.location.path();
   }
   constructor(
     private breakpointService: NzBreakpointService,
     private location: Location
-  ) {
-    //@ts-ignore
-    this.breakpointService.subscribe((isMobile) => {
-      console.log(isMobile?.matches);
-    });
-  }
+  ) {}
+
   setActiveLink(path: string) {
     this.activeLink = path;
+  }
+  toggleTheme() {
+    if (this.theme === 'dark') {
+      this.theme = 'light';
+      (document.getElementById('theme-link') as HTMLAnchorElement).href =
+        './assets/themes/light.css';
+      document.body.classList.remove('dark');
+    } else {
+      this.theme = 'dark';
+      (document.getElementById('theme-link') as HTMLAnchorElement).href =
+        './assets/themes/dark.css';
+      document.body.classList.add('dark');
+    }
   }
 }

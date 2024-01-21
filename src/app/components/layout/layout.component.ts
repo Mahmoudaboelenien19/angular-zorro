@@ -42,7 +42,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
         [nzTrigger]="null"
       >
         <div class="logo"></div>
-        <ul nz-menu nzTheme="dark" nzMode="inline">
+        <ul nz-menu nzMode="inline">
           <li nz-menu-item>
             <span nz-icon nzType="pie-chart"></span>
             <span>Option 1</span>

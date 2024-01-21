@@ -6,7 +6,7 @@ const fs = require( 'fs' );
 const basicStyles = `@import './node_modules/ng-zorro-antd/ng-zorro-antd.less';`;
 const darkStyles = `@import './node_modules/ng-zorro-antd/ng-zorro-antd.dark.less';`;
 // ng zorro compact theme variables
-const compactThemeVars = require( './node_modules/ng-zorro-antd/compact-theme' );
+// const compactThemeVars = require( './node_modules/ng-zorro-antd/' );
 // ng zorro dark theme variables
 const darkThemeVars = require( './node_modules/ng-zorro-antd/dark-theme' );
 
@@ -14,24 +14,20 @@ less.render( `${ basicStyles }`, {
     javascriptEnabled: true,
     plugins: [new LessPluginCleanCSS( { advanced: true } )],
     modifyVars: {
-
-
-        
-
-        ...compactThemeVars,
         ...{
             // for the compact theme
             // you need to add your color variables here
             // you can find the full variables list here
             // https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/scripts/site/_site/doc/theme.less
-            'primary-color': '#111521',
-            'error-color': 'green'
+            // 'primary-color': '#111521',
+            'primary-color': '#f55',
+
         }
     }
 } ).then( data => {
     fs.writeFileSync(
         // output path for the theme style
-        './src/assets/themes/compact.css',
+        './src/assets/themes/light.css',
         data.css
     );
 } ).catch( e => {
@@ -49,8 +45,8 @@ less.render( `${ darkStyles }`, {
             // you need to add your color variables here
             // you can find the full variables list here
             // https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/scripts/site/_site/doc/theme.less
-            'primary-color': '#02cadb',
-            'error-color': 'yellow'
+            'primary-color': '#f55',
+
         }
     }
 } ).then( data => {
