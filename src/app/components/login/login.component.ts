@@ -104,7 +104,7 @@ const inputs = [
         <button nz-button [nzType]="'primary'" nzBlock>Log in</button>
         <div class="d-flex justify-content-center align-items-center mt-3">
           don't have an account ?
-          <button nz-button nzType="link">register now!</button>
+          <button nz-button nzType="link">register now !</button>
         </div>
       </form>
     </div>
