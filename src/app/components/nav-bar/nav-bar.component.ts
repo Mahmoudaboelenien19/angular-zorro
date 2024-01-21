@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { RouterModule } from '@angular/router';
 import { NzBreakpointService } from 'ng-zorro-antd/core/services';
-import { CommonModule, Location } from '@angular/common';
+import { CommonModule, Location, isPlatformBrowser } from '@angular/common';
 const links = [
   { link: 'home', path: '' },
   { link: 'button', path: '/buttons' },
@@ -132,6 +132,8 @@ const links = [
   ],
 })
 export class NavBarComponent implements OnInit {
+  platformId = inject(PLATFORM_ID);
+
   links = links;
   activeLink = '';
   theme: 'light' | 'dark' = 'light';
@@ -141,18 +143,27 @@ export class NavBarComponent implements OnInit {
   constructor(
     private breakpointService: NzBreakpointService,
     private location: Location
-  ) {}
+  ) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.theme =
+        (localStorage.getItem('theme') as 'light' | 'dark') || 'light';
+      this.toggleTheme();
+    }
+  }
 
   setActiveLink(path: string) {
     this.activeLink = path;
   }
   toggleTheme() {
     if (this.theme === 'dark') {
+      localStorage.setItem('theme', 'light');
       this.theme = 'light';
       (document.getElementById('theme-link') as HTMLAnchorElement).href =
         './assets/themes/light.css';
       document.body.classList.remove('dark');
     } else {
+      localStorage.setItem('theme', 'dark');
+
       this.theme = 'dark';
       (document.getElementById('theme-link') as HTMLAnchorElement).href =
         './assets/themes/dark.css';
