@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { ButtonsComponent } from './components/buttons/buttons.component';
-import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
-import { FormTwoComponent } from './components/form-two/form-two.component';
-import { HomeComponent } from './components/home/home.component';
-import { CardComponent } from './components/card/card.component';
+import { ButtonsComponent } from './components/buttons/buttons.component.js';
+import { LoginComponent } from './components/login/login.component.js';
+import { SignupComponent } from './components/signup/signup.component.js';
+import { FormTwoComponent } from './components/form-two/form-two.component.js';
+import { HomeComponent } from './components/home/home.component.js';
+import { CardComponent } from './components/card/card.component.js';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
