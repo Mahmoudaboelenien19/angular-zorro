@@ -152,7 +152,6 @@ const inputs = [
     `
       .form-login {
         max-width: 600px;
-        // background-color: grey;
       }
       small {
         text-align: center;
