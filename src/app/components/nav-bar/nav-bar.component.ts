@@ -61,7 +61,12 @@ const links = [
           <i class="bi bi-three-dots-vertical"></i>
         </button>
 
-        <i class="bi bi-gear-fill" (click)="toggleTheme()"></i>
+        @if(theme==="light"){
+
+        <i class="bi bi-moon-fill" (click)="toggleTheme()"></i>
+        }@else{
+        <i class="bi bi-sun-fill text-white" (click)="toggleTheme()"></i>
+        }
       </div>
     </nav>
   `,
