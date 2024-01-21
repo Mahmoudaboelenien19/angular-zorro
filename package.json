@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": " node ./less-compiler.js && ng serve",
-    "build": "node ./less-compiler.js && ng build",
+    "start": " ng serve",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:zorro": "node dist/zorro/server/server.mjs"
