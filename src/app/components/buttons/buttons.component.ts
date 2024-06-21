@@ -9,32 +9,19 @@ import { NzSpaceModule } from 'ng-zorro-antd/space';
   standalone: true,
   imports: [NzGridModule, NzDividerModule, NzButtonModule, NzSpaceModule],
   template: `
-    <div nz-row nzJustify="space-between">
-      @for(x of [1,2,3];track x;){
+    <div class="page">
+      <div class="w-full p-2">
+        <nz-space nzSize="large">
+          <button *nzSpaceItem nz-button nzType="primary">Button</button>
+          <button *nzSpaceItem nz-button nzType="primary">Button</button>
+          <button *nzSpaceItem nz-button nzType="primary">Button</button>
+        </nz-space>
 
-      <div class="demo" nz-col nzXs="24" nzMd="12" nzLg="8">
-        <div style="background: blue;height: 100%">hi</div>
+        <nz-divider nzText="spacing"></nz-divider>
       </div>
-
-      }
-    </div>
-    <nz-divider nzText="spacing"></nz-divider>
-    <div>
-      <nz-space nzSize="large">
-        <button *nzSpaceItem nz-button nzType="primary">Button</button>
-        <button *nzSpaceItem nz-button nzType="primary">Button</button>
-        <button *nzSpaceItem nz-button nzType="primary">Button</button>
-      </nz-space>
     </div>
   `,
-  styles: [
-    `
-      div.demo {
-        height: 100px;
-        padding: 10px;
-      }
-    `,
-  ],
+  styles: [``],
 })
 export class ButtonsComponent {
   isLoading: boolean = false;

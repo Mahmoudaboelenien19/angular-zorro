@@ -50,9 +50,7 @@ const inputs = [
     NzNotificationModule,
   ],
   template: `
-    <div
-      class="mt-5 d-flex justify-content-center align-items-center w-100  h-75 "
-    >
+    <div class="page ">
       <form
         nz-form
         [formGroup]="validateForm"

@@ -9,10 +9,11 @@ import { CommonModule, Location, isPlatformBrowser } from '@angular/common';
 const links = [
   { link: 'home', path: '' },
   { link: 'button', path: '/buttons' },
-  { link: 'logi n', path: '/login' },
+  { link: 'login', path: '/login' },
   { link: 'signup', path: '/signup' },
   { link: 'form ', path: '/form' },
   { link: 'cards ', path: '/card' },
+  { link: 'grid ', path: '/grid' },
 ];
 @Component({
   selector: 'app-nav-bar',
@@ -72,6 +73,30 @@ const links = [
   `,
   styles: [
     `
+      .bi-moon-fill {
+        animation: rotate 0.2s forwards;
+      }
+
+      .bi-sun-fill {
+        animation: rotate-reverse 0.2s forwards;
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(45deg) scale(0.7);
+        }
+        100% {
+          transform: rotate(0deg) scale(1);
+        }
+      }
+
+      @keyframes rotate-reverse {
+        0% {
+          transform: rotate(-45deg) scale(0.7);
+        }
+        100% {
+          transform: rotate(0deg) scale(1);
+        }
+      }
       nav {
         z-index: 5;
         left: 0;

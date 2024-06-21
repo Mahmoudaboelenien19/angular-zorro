@@ -1,12 +1,4 @@
-import {
-  Component,
-  HostListener,
-  OnInit,
-  PLATFORM_ID,
-  afterNextRender,
-  afterRender,
-  inject,
-} from '@angular/core';
+import { Component, OnInit, PLATFORM_ID, inject } from '@angular/core';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
@@ -29,11 +21,6 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
   ],
   template: `
     <nz-layout>
-      <!-- <nz-sider
-        [nzCollapsible]="(isMobile$ | async) ? 'false' : 'true'"
-        nzWidth="200px"
-        [nzCollapsed]="isMobile$ | async"
-      > -->
       <nz-sider
         [nzCollapsed]="showAside"
         nzWidth="200px"

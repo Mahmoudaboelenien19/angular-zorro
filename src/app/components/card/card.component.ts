@@ -33,7 +33,7 @@ const card = {
   standalone: true,
   imports: [NzCardModule, NzImageModule, NzTypographyModule, NzIconModule],
   template: `
-    <div class="container mt-5">
+    <div class="container page">
       <div class="row mx-auto">
         @for(c of [card,card,card,card,card,card,card];track c){
         <div class="p-1 col-12 col-sm-6 col-md-4 col-lg-3">

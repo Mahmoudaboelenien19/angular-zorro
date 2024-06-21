@@ -61,9 +61,9 @@ const inputs = [
     NzCheckboxModule,
   ],
   template: `
-    <div class="d-flex justify-content-center align-items-center w-100  h-75 ">
+    <div class=" page ">
       <form
-        class="w-100 form-login  px-3 py-5"
+        class="w-100 form-login  "
         nz-form
         [formGroup]="validateForm"
         (ngSubmit)="submitForm()"
